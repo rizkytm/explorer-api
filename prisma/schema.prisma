@@ -1,0 +1,25 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Folder {
+  id          String    @id @default(uuid())
+  name        String    @db.VarChar(255)
+  description String?   @db.Text
+
+  // Self-referencing relationship for folder hierarchy
+  parentId    String?   @db.VarChar(36)
+  parent      Folder?   @relation("FolderHierarchy", fields: [parentId], references: [id], onDelete: SetNull)
+  subfolders  Folder[]  @relation("FolderHierarchy")
+  
+  // Timestamps
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([parentId], name: "idx_parent_folder")
+}
