@@ -1,4 +1,4 @@
-# Elysia with Bun runtime
+# Explorer API using Elysia with Bun runtime
 
 ## Getting Started
 Install Dependencies (if counter error, try use node v22)
