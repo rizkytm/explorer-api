@@ -1,4 +1,4 @@
-# Explorer API using Elysia with Bun runtime
+# Explorer API Elysia with Bun runtime
 
 ## Getting Started
 Install Dependencies (if counter error, try use node v22)
@@ -6,6 +6,7 @@ Install Dependencies (if counter error, try use node v22)
 bun install
 ```
 
+Create database with name folder_explorer
 Copy Environment Variables and change username and password of database
 ```bash
 cp .env.example .env
