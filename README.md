@@ -1,7 +1,7 @@
 # Elysia with Bun runtime
 
 ## Getting Started
-Install Dependencies
+Install Dependencies (if counter error, try use node v22)
 ```bash
 bun install
 ```
