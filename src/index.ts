@@ -19,6 +19,7 @@ const app = new Elysia()
     };
   })
 
+  // TODO: move to services
   // Folder Routes
   .group('/folders', (app) =>
     app
