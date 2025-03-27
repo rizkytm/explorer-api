@@ -1,9 +1,19 @@
 # Elysia with Bun runtime
 
 ## Getting Started
-To get started with this template, simply paste this command into your terminal:
+Install Dependencies
 ```bash
-bun create elysia ./elysia-example
+bun install
+```
+
+Copy Environment Variables and change username and password of database
+```bash
+cp .env.example .env
+```
+
+Run migrations
+```bash
+bunx prisma migrate dev
 ```
 
 ## Development
@@ -11,5 +21,10 @@ To start the development server run:
 ```bash
 bun run dev
 ```
+
+Swagger Url : http://localhost:3000/swagger
+
+## Testing
+Test Result: https://jam.dev/c/27c083e6-1b80-4188-a82a-1a866747b140
 
 Open http://localhost:3000/ with your browser to see the result.
